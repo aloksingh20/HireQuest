@@ -8,7 +8,10 @@ HireQuest is a comprehensive Android hiring application designed to connect job 
 - **Notification System:** Stay updated with real-time notifications, ensuring you never miss important updates or interactions.
 - **Real-Time Chat:** Foster seamless communication between job seekers and HR professionals through a real-time chat feature.
 - **Meeting Scheduling:** Simplify the process of scheduling interviews and meetings with built-in tools for convenient coordination.
+- **Meeting Alert Option:** Set meeting reminders using the Alarm Manager to ensure timely and efficient interviews.
 - **Profile Bookmarking:** Save and organize profiles for future reference and streamlined decision-making.
+- **User Authentication:** Secure user accounts and data with robust authentication mechanisms.
+- **Dual Home Dashboards:** Tailored home dashboards for different user roles – one for normal candidates and the other for HR users.
 
 ## Technology Stack
 
