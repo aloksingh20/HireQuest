@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    style="@style/PageBackground">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/breaker_line"
+        android:background="@color/text"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.5"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/experience_recyclerView_list_title"
+        style="@style/Text"
+        android:text="Position"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/breaker_line"/>
+
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/experience_recyclerView_list_edit_icon"
+        style="@style/ProfileIconTint"
+        android:src="@drawable/icon_edit"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/breaker_line"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Text"
+        android:id="@+id/experience_recyclerView_list_company"
+        android:text="Company"
+        android:textSize="12sp"
+        android:layout_below="@+id/experience_recyclerView_list_title"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Text"
+        android:id="@+id/experience_recyclerView_list_duration"
+        android:text="Jan 2023 - present"
+        android:textSize="12sp"
+        android:layout_below="@+id/experience_recyclerView_list_company"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Text"
+        android:id="@+id/experience_recyclerView_list_description"
+        android:text=""
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/experience_recyclerView_list_duration"/>
+
+
+</RelativeLayout>

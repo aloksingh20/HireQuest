@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="15dp"
+    android:paddingBottom="20dp"
+    style="@style/AppBar"
+    >
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/icon_back"
+        style="@style/IconTint"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/about_me_popup_text"
+        style="@style/Text"
+        android:text="About me"
+        android:layout_below="@+id/backButton"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/about_me_popup_editText_Container"
+        android:layout_below="@+id/about_me_popup_text"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="3dp"
+        android:outlineSpotShadowColor="@color/base_color"
+        android:outlineAmbientShadowColor="@color/base_color"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/CardViewBackground"
+            android:paddingBottom="5dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/about_me_popup_text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterMaxLength="300"
+                app:counterEnabled="true"
+                android:hint="Write about yourself."
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.NoUnderline"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/about_me_popup_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="start"
+                    android:maxLines="15"
+                    android:minLines="12"
+                    android:textSize="14sp"
+                    android:textDirection="ltr"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.NoUnderline"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_button_loading_animation"
+        app:lottie_fileName="loading.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/about_me_popup_submit_button"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="Save"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:textColor="@color/page_background"
+        app:cornerRadius="16sp"
+        android:backgroundTint="@color/base_color"
+        app:elevation="15dp"
+        android:elevation="15dp"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:outlineAmbientShadowColor="@color/base_color"
+        android:outlineSpotShadowColor="@color/base_color"/>
+
+
+</RelativeLayout>

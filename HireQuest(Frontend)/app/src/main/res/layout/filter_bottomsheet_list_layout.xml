@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="5dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/edittext_background_day">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter_list_layout_text"
+        android:text="Filter option 1"
+        android:textSize="14sp"
+        style="@style/Text"/>
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:src="@drawable/icon_add"
+        android:layout_marginStart="5dp"/>
+
+</LinearLayout>

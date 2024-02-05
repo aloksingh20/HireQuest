@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="6dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_background_day"
+        android:backgroundTint="@color/base_color"
+        android:id="@+id/top_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout_confirmation_popup_title"
+        style="@style/Text"
+        android:text="Logout"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/top_view"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout_confirmation_popup_logoutBtn"
+        android:text="Yes"
+        android:textColor="@color/white"
+        android:layout_below="@+id/logout_confirmation_popup_title"
+        android:backgroundTint="@color/base_color"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:cornerRadius="16dp"
+        app:elevation="10dp"
+        android:elevation="10dp"
+        android:shadowColor="@color/base_color"
+        android:outlineAmbientShadowColor="@color/base_color"
+        android:outlineSpotShadowColor="@color/base_color"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout_confirmation_popup_cancelBtn"
+        style="@style/CustomOutlinedButton"
+        android:text="Cancel"
+        android:textSize="14sp"
+        android:layout_below="@+id/logout_confirmation_popup_logoutBtn"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:cornerRadius="16dp"
+        android:shadowColor="@color/base_color"
+        android:outlineAmbientShadowColor="@color/base_color"
+        android:outlineSpotShadowColor="@color/base_color"
+        />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    style="@style/PageBackground">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/breaker_line"
+        android:background="@color/text"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.5"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_recyclerview_item_title"
+        style="@style/Text"
+        android:text="HackerRank"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@id/breaker_line"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        style="@style/IconTint"
+        android:id="@+id/profile_recyclerview_item_url"
+        android:src="@drawable/icon_url"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/breaker_line"
+        android:layout_toEndOf="@+id/profile_recyclerview_item_title"/>
+
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        style="@style/ProfileIconTint"
+        android:id="@+id/profile_recyclerview_item_edit_icon"
+        android:src="@drawable/icon_edit"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/breaker_line"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_recyclerview_item_description"
+        style="@style/Text"
+        android:text=""
+        android:textSize="12sp"
+        android:layout_below="@+id/profile_recyclerview_item_title"
+        android:layout_marginTop="3dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "892359217503",
+    "firebase_url": "https://gethired-7ceb1-default-rtdb.firebaseio.com",
+    "project_id": "gethired-7ceb1",
+    "storage_bucket": "gethired-7ceb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892359217503:android:a298209204c9b201f926ea",
+        "android_client_info": {
+          "package_name": "com.example.gethired"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892359217503-edbgb1qmljgcqbeoova03n36lf01dcmv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJwOBrrydfNTVcueHHebOtEpTc6xo0Q1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892359217503-28fikec5ocur731e44dle91ttrsuotke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

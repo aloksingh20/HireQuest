@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity"
+    android:id="@+id/setting_activity"
+    style="@style/PageBackground">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/back_button"
+        style="@style/IconTint"
+        android:src="@drawable/icon_back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setting_title"
+        android:text="Settings"
+        android:textSize="18sp"
+        style="@style/Text"
+        android:textStyle="bold"
+        android:layout_below="@id/back_button"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/setting_notification_container"
+        android:layout_below="@+id/setting_title"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        android:outlineSpotShadowColor="@color/base_color"
+        android:outlineAmbientShadowColor="@color/base_color">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardViewBackground"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/setting_notification_icon"
+                style="@style/IconTint"
+                android:src="@drawable/ic_notification"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setting_notification_title"
+                android:text="Notifications"
+                android:layout_toEndOf="@+id/setting_notification_icon"
+                style="@style/Text"
+                android:textSize="14dp"
+                android:layout_marginStart="15dp"
+                android:layout_centerVertical="true"/>
+
+            <Switch
+                android:id="@+id/setting_notification_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignParentEnd="true"
+                tools:ignore="UseSwitchCompatOrMaterialXml"
+                android:thumbTint="@color/white"
+                android:trackTint="@color/on"
+                android:background="@drawable/rounded_background_day"
+                android:backgroundTint="@color/on"
+                android:paddingStart="2dp"
+                android:layout_centerVertical="true"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/setting_switchToHr_container"
+        android:layout_below="@+id/setting_notification_container"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        android:outlineSpotShadowColor="@color/base_color"
+        android:outlineAmbientShadowColor="@color/base_color">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardViewBackground"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/setting_switchToHr_icon"
+                style="@style/IconTint"
+                android:src="@drawable/icon_hr"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setting_switchToHr_title"
+                android:text="Switch to HR"
+                android:layout_toEndOf="@+id/setting_switchToHr_icon"
+                style="@style/Text"
+                android:textSize="14dp"
+                android:layout_marginStart="15dp"
+                android:layout_centerVertical="true"/>
+
+            <Switch
+                android:id="@+id/setting_dswitchToHr_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignParentEnd="true"
+                tools:ignore="UseSwitchCompatOrMaterialXml"
+                android:thumbTint="@color/text"
+                android:trackTint="@color/off"
+                android:background="@drawable/rounded_background_day"
+                android:backgroundTint="@color/off"
+                android:paddingStart="2dp"
+                android:layout_centerVertical="true"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/setting_darkMode_container"
+        android:layout_below="@+id/setting_switchToHr_container"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        android:outlineSpotShadowColor="@color/base_color"
+        android:outlineAmbientShadowColor="@color/base_color">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardViewBackground"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                style="@style/IconTint"
+                android:id="@+id/setting_darkMode_icon"
+                android:src="@drawable/icon_dark"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setting_darkMode_title"
+                android:text="Dark mode"
+                android:layout_toEndOf="@+id/setting_darkMode_icon"
+                style="@style/Text"
+                android:textSize="14dp"
+                android:layout_marginStart="15dp"
+                android:layout_centerVertical="true"/>
+
+            <Switch
+                android:id="@+id/setting_darkMode_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignParentEnd="true"
+                tools:ignore="UseSwitchCompatOrMaterialXml"
+                android:thumbTint="@color/text"
+                android:trackTint="@color/off"
+                android:background="@drawable/rounded_background_day"
+                android:backgroundTint="@color/off"
+                android:paddingStart="2dp"
+                android:layout_centerVertical="true"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/setting_password_container"
+        android:layout_below="@+id/setting_darkMode_container"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        android:outlineSpotShadowColor="@color/base_color"
+        android:outlineAmbientShadowColor="@color/base_color">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardViewBackground"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                style="@style/IconTint"
+                android:id="@+id/setting_password_icon"
+                android:src="@drawable/icon_password"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setting_password_title"
+                android:text="Password"
+                android:layout_toEndOf="@+id/setting_password_icon"
+                style="@style/Text"
+                android:textSize="14dp"
+                android:layout_marginStart="15dp"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/setting_password_change_icon"
+                style="@style/IconTint"
+                android:src="@drawable/icon_next"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/setting_logout_container"
+        android:layout_below="@+id/setting_password_container"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        android:outlineSpotShadowColor="@color/base_color"
+        android:outlineAmbientShadowColor="@color/base_color">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardViewBackground"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/setting_logout_icon"
+                style="@style/IconTint"
+                android:src="@drawable/icon_logout"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setting_logout_title"
+                android:text="Logout"
+                android:layout_toEndOf="@+id/setting_logout_icon"
+                style="@style/Text"
+                android:textSize="14dp"
+                android:layout_marginStart="15dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

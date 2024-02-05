@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandingActivity"
+    android:paddingTop="20dp"
+    style="@style/PageBackground">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:src="@drawable/hq_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/tabLayout"
+        android:layout_marginBottom="40dp"
+        android:visibility="visible"
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/container"
+        app:tabIndicatorColor="@color/base_color"
+        app:tabIndicatorAnimationDuration="@integer/material_motion_duration_long_1"
+        style="@style/AppBar"
+        app:tabMode="fixed"
+        app:tabGravity="center">
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/container"
+        style="@style/BottomSheetBackground"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-20dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="20dp"
+        android:outlineAmbientShadowColor="@color/base_color"
+        android:outlineSpotShadowColor="@color/base_color"
+        android:alpha="0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            style="@style/BottomSheetBackground"
+            android:outlineAmbientShadowColor="@color/base_color"
+            android:outlineSpotShadowColor="@color/base_color">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/base_color"
+                android:textColor="@color/page_background"
+                android:visibility="visible"
+                app:cornerRadius="10dp"
+                android:alpha="0"
+                android:shadowColor="@color/base_color"
+                app:elevation="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/loginButton"
+                android:id="@+id/view"
+                android:layout_marginTop="20dp"
+                android:alpha="0"
+                android:background="@color/text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Text"
+                android:text="Or continue with social account"
+                android:textSize="11sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/view"
+                android:layout_marginTop="-7dp"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueWithGoogleButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Login with Google"
+                android:textAllCaps="false"
+                android:textColor="@color/heading"
+                android:visibility="visible"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/google"
+                app:iconGravity="textStart"
+                app:iconSize="20dp"
+                app:iconTint="@null"
+                app:strokeColor="@color/heading"
+                app:strokeWidth="0.5dp"
+                android:layout_below="@+id/view"
+                android:alpha="0"
+                android:shadowColor="@color/base_color"
+                app:elevation="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signUpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ThemeOverlay.Material3.Button.TextButton"
+                android:text="Join HireQuest"
+                android:layout_below="@id/continueWithGoogleButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                android:visibility="visible"
+                android:textColor="@color/base_color"
+                android:textAllCaps="false"
+                android:background="@android:color/transparent"
+                android:alpha="0"
+                android:shadowColor="@color/base_color"
+                app:elevation="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    style="@style/PageBackground">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        style="@style/IconTint"
+        android:id="@+id/back_button"
+        android:src="@drawable/icon_back"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resume_popup_title"
+        style="@style/Text"
+        android:text="Add Resume"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resume_popup_before_upload_container"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="16dp"
+        android:elevation="0dp"
+        app:cardElevation="0.0dp"
+        android:visibility="visible"
+        style="@style/DashedBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="35dp"
+            style="@style/DashedBackground">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                style="@style/IconTint"
+                android:id="@+id/resume_popup_upload_icon"
+                android:src="@drawable/icon_upload"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resume_popup_upload_text"
+                style="@style/Text"
+                android:text="Upload CV/Resume"
+                android:layout_toEndOf="@+id/resume_popup_upload_icon"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resume_popup_after_upload_container"
+        android:layout_below="@+id/resume_popup_title"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="0dp"
+        app:cardElevation="0.0dp"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:gravity="center"
+            style="@style/DashedBackground">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/resume_popup_after_pdf_icon"
+                android:src="@drawable/icon_pdf"
+                android:layout_alignParentStart="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resume_popup_after_file_name"
+                style="@style/Text"
+                android:text="file-name"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:layout_toEndOf="@+id/resume_popup_after_pdf_icon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resume_popup_after_file_size"
+                android:text="482 kb"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/resume_popup_after_pdf_icon"
+                android:layout_below="@id/resume_popup_after_file_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resume_popup_after_divider"
+                android:text="-"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/resume_popup_after_file_size"
+                android:layout_below="@id/resume_popup_after_file_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resume_popup_after_file_uploadedAt"
+                android:text="14 Feb 2022 at 11:30 am"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/resume_popup_after_divider"
+                android:layout_below="@id/resume_popup_after_file_name"
+                />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/resume_popup_after_delete_pdf_icon"
+                android:src="@drawable/icon_delete_pdf"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/resume_popup_after_pdf_icon"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resume_popup_after_file_delete_text"
+                android:text="Remove file"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/canceled"
+                android:layout_toEndOf="@+id/resume_popup_after_delete_pdf_icon"
+                android:layout_below="@id/resume_popup_after_pdf_icon"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resume_popup_instruction_text"
+        style="@style/Text"
+        android:text="Upload files in PDF format up to 5 MB. Just upload it once and you can use it in your next application."
+        android:layout_margin="20dp"
+        android:textSize="12sp"/>
+</LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resume_popup_save_button"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:cornerRadius="16sp"
+        android:backgroundTint="@color/base_color"
+        android:text="Save"
+        android:textColor="@color/page_background"
+        app:elevation="15dp"
+        android:elevation="15dp"
+        android:padding="10dp"
+        android:outlineAmbientShadowColor="@color/base_color"
+        android:outlineSpotShadowColor="@color/base_color"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>

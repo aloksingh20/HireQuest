@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="5dp"
+    android:outlineSpotShadowColor="@color/base_color"
+    android:outlineAmbientShadowColor="@color/base_color"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/search_user_profile_picture"
+            android:src="@drawable/img"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/circle"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_user_name"
+            android:text="User"
+            android:textSize="12sp"
+            android:layout_toEndOf="@+id/search_user_profile_picture"
+            android:textColor="@color/text"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_user_current_occupation"
+            android:text="Current Occupation"
+            android:textSize="12sp"
+            android:layout_toEndOf="@+id/search_user_profile_picture"
+            android:layout_below="@+id/search_user_name"
+            android:textColor="@color/editText_color"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_user_headline"
+            android:text="Headline"
+            android:textSize="10sp"
+            android:layout_toEndOf="@+id/search_user_profile_picture"
+            android:layout_below="@+id/search_user_current_occupation"
+            android:textColor="@color/editText_color"
+            android:layout_marginStart="10dp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:id="@+id/search_user_send_message"
+            android:layout_marginEnd="25dp"
+            app:cornerRadius="5sp"
+            android:backgroundTint="@color/base_color"
+            android:text="Message"
+            android:textSize="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textColor="@color/page_background"
+            android:elevation="15dp"
+            android:textAllCaps="false"
+            android:outlineAmbientShadowColor="@color/base_color"
+            android:outlineSpotShadowColor="@color/base_color"
+            android:layout_below="@+id/search_user_profile_picture"/>
+
+
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:id="@+id/search_user_bookmark"
+                android:src="@drawable/icon_bookmark_inactive"
+                android:layout_below="@+id/search_user_profile_picture"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="7dp"
+                />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

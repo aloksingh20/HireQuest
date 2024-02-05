@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">HireQuest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mission">"Empowering Tomorrow's Leaders, Today: Welcome to HireQuest, where we are revolutionizing the path to career success. Our mission is twofold: to empower students to become architects of their futures, and to provide HR professionals with a gateway to exceptional talent. With our innovative platform, students harness their potential, and HR experts discover their next great hire. Join us in reshaping the landscape of opportunity, forging connections that propel careers and businesses forward. Together, we're building a bridge to a brighter, more prosperous tomorrow."</string>
+    <string name="user_agreement_points"> 1. Purpose and Acceptable Use: \n HireQuest is dedicated to fostering professional growth. By using our platform, you commit to utilizing it solely for lawful and career-oriented purposes.\n\n
+ 2. Account Responsibility: \n Safeguard your account credentials. Sharing your login details or engaging in unauthorized access violates our policies.\n\n
+ 3. Prohibited Content: \n We foster a respectful environment. Content promoting discrimination, harassment, or unlawful activities is strictly prohibited.\n\n
+ 4. Professional Conduct: \n We encourage respectful interactions. Treat fellow users and professionals with courtesy and professionalism.\n\n
+ 5. Liability and Conduct: \n While we strive for excellence, HireQuest cannot be held responsible for any outcome resulting from your use of our platform.
+    </string>
+
+    <string name="web_client_id">947634495777-kev438fm3ojeidlujdd1bqo4ktpfbjpv.apps.googleusercontent.com</string>
+    <string-array name="spinner_options">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Professional</item>
+        <item>Expert</item>
+    </string-array>
+
+    <string name="edit_personal_info"><u>Edit personal info.</u></string>
+
+</resources>
+

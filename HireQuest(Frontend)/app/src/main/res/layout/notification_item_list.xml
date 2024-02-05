@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="0.7dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:gravity="center_vertical"
+        style="@style/PageBackground"
+        >
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:id="@+id/notification_isOpen_indicator_circle"
+            android:src="@drawable/icon_circle"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/notification_list_img"
+            android:src="@drawable/recruiter_img"
+            android:layout_toEndOf="@+id/notification_isOpen_indicator_circle"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/notification_list_img"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notification_heading"
+                style="@style/Text"
+                android:text="Someone just visited your profile"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Text"
+                android:id="@+id/notification_timing"
+                android:text="5 hrs"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ProfileIconTint"
+            android:id="@+id/notification_setting_icon"
+            android:src="@drawable/icon_notification_more"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

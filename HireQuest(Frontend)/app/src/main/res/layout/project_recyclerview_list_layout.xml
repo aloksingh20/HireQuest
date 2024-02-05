@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    style="@style/PageBackground">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/breaker_line"
+        android:background="@color/text"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.5"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/project_recyclerview_item_title"
+        style="@style/Text"
+        android:text="Title"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_below="@id/breaker_line"/>
+
+    <ImageView
+        android:id="@+id/project_recyclerview_item_url"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        style="@style/IconTint"
+        android:src="@drawable/icon_url"
+        android:layout_toRightOf="@+id/project_recyclerview_item_title"
+        android:layout_marginStart="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/breaker_line"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/project_edit_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        style="@style/ProfileIconTint"
+        android:src="@drawable/icon_edit"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/breaker_line"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Text"
+        android:id="@+id/project_recyclerview_item_duration"
+        android:text="Aug 2023 - Sep 2023"
+        android:layout_below="@+id/project_recyclerview_item_title"
+        android:textSize="12sp"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Text"
+        android:id="@+id/project_recyclerview_item_description"
+        android:layout_below="@+id/project_recyclerview_item_duration"
+        android:visibility="visible"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>

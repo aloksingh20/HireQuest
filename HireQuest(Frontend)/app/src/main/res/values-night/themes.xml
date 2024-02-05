@@ -1,0 +1,196 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Base application theme. -->
+    <style name="Theme.GetHired" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+
+    </style>
+
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CustomCardCorners" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearance_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">50dp</item>
+        <item name="cornerSizeTopRight">50dp</item>
+    </style>
+
+    <style name="Button.color" parent="ThemeOverlay.AppCompat">
+        <item name="colorPrimary">#ffff</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="queryBackground">@null</item>
+        <item name="queryHint">Search here</item> <!-- This removes the underline -->
+        <!-- Add any other customizations you want here -->
+    </style>
+
+    <style name="PopupAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_animation</item>
+    </style>
+
+    <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/edittext_background_day</item>
+    </style>
+
+    <style name="CustomTextInputLayoutFocused" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/base_color</item>
+        <item name="hintTextColor">@color/base_color</item>
+    </style>
+
+    <style name="NoPaddingTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+
+    <style name="NoPaddingEditText" parent="Widget.Design.TextInputEditText">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textCursorDrawable">@drawable/cursor_color</item>
+        <!-- Add other attributes for your SearchView style -->
+    </style>
+
+    <style name="CustomTabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextColor">@color/black</item> <!-- Set your desired color for inactive tabs -->
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.FilledBox.NoUnderline" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundMode">@android:color/transparent</item>
+        <item name="background">@color/black1</item>
+        <item name="backgroundTint">@color/black1</item>
+        <item name="backgroundColor">@color/black1</item>
+        <item name="passwordToggleTint">@color/white</item>
+    </style>
+
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+        <item name="backgroundTint">@color/black</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <!--    day-theme-->
+    <style name="AppBar">
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:buttonTint">@color/white</item>
+    </style>
+
+    <style name="EditTextStyle">
+                <item name="boxBackgroundMode">@android:color/transparent</item>
+        <item name="android:background">@drawable/edittext_background_day</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="IconTint">
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="Widget.Material3.Button.TextButton.ButtonBackground" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:strokeWidth">1</item>
+        <item name="strokeColor">@color/white</item>
+
+    </style>
+
+    <style name="RoundedCorner">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="CardViewBackground">
+        <item name="android:background">@drawable/cardview_background_night</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="drawableTint">@color/black</item>
+    </style>
+
+    <style name="IconBackground">
+        <item name="android:background">@drawable/box_background_selector</item>
+    </style>
+
+    <style name="PageBackground">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="SearchBar">
+        <item name="android:background">@drawable/searchview_background_night</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="drawableTint">@color/white</item>
+    </style>
+
+    <style name="BottomSheetBackground">
+        <item name="android:background">#150B3D</item>
+        <item name="android:backgroundTint">#150B3D</item>
+        <item name="backgroundColor">#150B3D</item>
+    </style>
+
+
+
+    <style name="Widget.MaterialComponents.TextInputEditText.OutlinedBox.Custom" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:background">@drawable/edittext_background_night</item>
+        <item name="android:drawableTint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="hintTextColor">@color/white</item>
+
+    </style>
+
+
+
+<!--button-->
+
+    <style name="CustomOutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/white</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="RoundedBackground">
+        <item name="android:background">@drawable/rounded_background_night</item>
+    </style>
+    <style name="ProfileIconTint">
+        <item name="android:tint">#CEC3FF</item>
+    </style>
+    <style name="DashedBackground">
+        <item name="android:background">@drawable/resume_upload_background_night</item>
+    </style>
+
+    <color name="fab_color">@color/white</color>
+    <color name="fab_background_color">@color/base_color</color>
+
+
+</resources>

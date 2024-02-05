@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/PageBackground"
+    >
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/back_button"
+        android:src="@drawable/icon_back"
+        style="@style/IconTint"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/back_button">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/user_profile_edit_popup_image_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:outlineAmbientShadowColor="@color/base_color"
+                android:outlineSpotShadowColor="@color/base_color"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardViewBackground"
+                    android:padding="16dp"
+                    >
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/user_profile_edit_profile_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentStart="true"
+                        app:strokeColor="@color/base_color"
+                        app:strokeWidth="0.1dp"
+                        app:shapeAppearanceOverlay="@style/circle"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:id="@+id/user_profile_user_info_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/user_profile_edit_profile_img"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/user_profile_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="User"
+                            style="@style/Text"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/user_profile_user_currentOccupation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Occupation"
+                                style="@style/Text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/user_profile_user_headline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="Headline"
+                                style="@style/Text"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--            <ImageView-->
+                    <!--                android:id="@+id/profile_personal_info_edit"-->
+                    <!--                android:layout_width="26dp"-->
+                    <!--                android:layout_height="26dp"-->
+                    <!--                android:layout_alignParentEnd="true"-->
+                    <!--                android:background="@drawable/box_background_selector"-->
+                    <!--                android:padding="2dp"-->
+                    <!--                android:src="@drawable/icon_edit" />-->
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/user_profile_edit_change_img_btn"
+                        style="@style/CustomOutlinedButton"
+                        android:layout_below="@+id/user_profile_edit_profile_img"
+                        android:text="Change image"
+                        android:textSize="10dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:alpha="1"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_fullName_title"
+                android:text="Full name"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                style="@style/Text"
+                android:layout_below="@id/user_profile_edit_popup_image_container"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_fullName_edittext_container"
+                android:layout_below="@+id/user_profile_edit_popup_fullName_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+
+                android:outlineSpotShadowColor="@color/base_color"
+                android:outlineAmbientShadowColor="@color/base_color">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_profile_edit_popup_fullName_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Custom"
+                    android:layout_gravity="start"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_username_title"
+                android:text="Username"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                style="@style/Text"
+                android:layout_below="@id/user_profile_edit_popup_fullName_edittext_container"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_username_edittext_container"
+                android:layout_below="@+id/user_profile_edit_popup_username_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:outlineSpotShadowColor="@color/base_color"
+                android:outlineAmbientShadowColor="@color/base_color">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_profile_edit_popup_username_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Custom"
+                    android:layout_gravity="start"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textSize="14sp"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_current_position_title"
+                android:text="Current Position"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                style="@style/Text"
+                android:layout_below="@id/user_profile_edit_popup_username_edittext_container"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_current_position_edittext_container"
+                android:layout_below="@+id/user_profile_edit_popup_current_position_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+
+                android:outlineSpotShadowColor="@color/base_color"
+                android:outlineAmbientShadowColor="@color/base_color">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_profile_edit_popup_current_position_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Custom"
+                    android:layout_gravity="start"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textSize="14sp"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_add_current_position_title"
+                android:text="Add New Position"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/base_color"
+                android:drawableStart="@drawable/icon_add"
+                android:layout_below="@id/user_profile_edit_popup_current_position_edittext_container"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_top_skills_title"
+                android:text="Top Skills"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                style="@style/Text"
+                android:layout_below="@id/user_profile_edit_popup_add_current_position_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_top_skills_edittext_container"
+                android:layout_below="@+id/user_profile_edit_popup_top_skills_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+
+                android:outlineSpotShadowColor="@color/base_color"
+                android:outlineAmbientShadowColor="@color/base_color">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_profile_edit_popup_top_skills_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/editText_color"
+                    android:textSize="14sp"
+                    style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Custom"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_add_top_skills_title"
+                android:text="Manage Skills"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/base_color"
+                android:drawableStart="@drawable/icon_add"
+                android:layout_below="@id/user_profile_edit_popup_top_skills_edittext_container"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_personal_info_title"
+                android:text="Personal Information"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                style="@style/Text"
+                android:alpha="0.8"
+                android:layout_below="@id/user_profile_edit_popup_add_top_skills_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_personal_info_subtitle"
+                android:text="Add or edit your profile Email, Gender and more "
+                android:textSize="10sp"
+                android:alpha="0.8"
+                style="@style/Text"
+                android:layout_below="@id/user_profile_edit_popup_personal_info_title"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_edit_personal_info_button"
+                android:text="@string/edit_personal_info"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/base_color"
+                android:layout_below="@id/user_profile_edit_popup_personal_info_subtitle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_edit_popup_save_button"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                app:cornerRadius="16sp"
+                android:backgroundTint="@color/base_color"
+                android:text="Update"
+                android:textColor="@color/page_background"
+                app:elevation="15dp"
+                android:elevation="15dp"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                android:outlineAmbientShadowColor="@color/base_color"
+                android:outlineSpotShadowColor="@color/base_color"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/user_profile_edit_popup_edit_personal_info_button"
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

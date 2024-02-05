@@ -1,0 +1,3 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/calendar" android:width="19dp" android:height="19dp" android:gravity="center"/>
+</layer-list>

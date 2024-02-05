@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<applinks
+    xmlns:android="http://www.w3.org/1999/xhtml">
+
+    <target android:package="com.example.myapp">
+        <applink android:url="https://app.goo.gl/profile/*">
+            <param android:name="userId" android:required="true" />
+        </applink>
+    </target>
+</applinks>

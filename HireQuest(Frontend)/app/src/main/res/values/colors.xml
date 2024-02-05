@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#202a36</color>
+    <color name="purple_700">#202a36</color>
+    <color name="teal_200">#202a36</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#191D20</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black1">#1C2025</color>
+
+    <color name="base_color">#5137d7</color>
+    <color name="join_background_color">#1A5137D7</color>
+    <color name="button_color">#132247</color>
+    <color name="page_background">#F7F6FF</color>
+    <color name="link_color">#2196F3</color>
+    <color name="red">#B50000</color>
+    <color name="badge_background_color">#8C1C1C</color>
+    <color name="heading"> #202a36</color>
+    <color name="text">#524B6B</color>
+    <color name="card">#efebfa</color>
+    <color name="hint_color">#290d80</color>
+    <color name="isAvailable">#4CAF50</color>
+
+    <color name="breakLine">#DEE1E7</color>
+
+    <color name="remove_button">#CEC3FF</color>
+    <color name="profileVisitCard">#0D5137D7</color>
+    <color name="profileBookmarkCard">#0D39D1A3</color>
+    <color name="profileBookmark">#39D1A3</color>
+    <color name="message">#00B3FF</color>
+    <color name="messageCard">#0D00B3FF</color>
+    <color name="scheduledMeetingCard">#0DFF5D4F</color>
+    <color name="scheduledMeeting">#FF5D4F</color>
+    <color name="completed">#37D78A</color>
+    <color name="completed_background">#1A37D78A</color>
+    <color name="canceled">#D73737</color>
+    <color name="canceled_background">#1AD73737</color>
+    <color name="not_joined">#A4A4A4</color>
+    <color name="not_joined_background">#1AA4A4A4</color>
+    <color name="date_background_notSelected">#AAA6B9</color>
+    <color name="editText_color">#524B6B</color>
+    <color name="on">#56CD54</color>
+    <color name="off">#E5E5E5</color>
+
+
+
+
+</resources>

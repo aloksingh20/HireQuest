@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonBackground">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/white</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="cornerRadius">16sp</item>
+        <item name="android:radius">16sp</item>
+        <item name="elevation">15sp</item>
+        <item name="cardElevation">15sp</item>
+        <item name="android:outlineAmbientShadowColor">@color/base_color</item>
+    </style>
+</resources>

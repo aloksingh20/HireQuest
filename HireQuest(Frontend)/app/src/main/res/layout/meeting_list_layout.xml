@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    app:elevation="10dp"
+    app:cardCornerRadius="15dp"
+    android:outlineAmbientShadowColor="@color/base_color"
+    android:outlineSpotShadowColor="@color/base_color"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        style="@style/CardViewBackground"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/meeting_time_left"
+            style="@style/CardViewBackground"
+            android:backgroundTint="@color/page_background"
+            android:text="starts in 5h 12m"
+            android:textColor="@color/base_color"
+            android:textSize="10sp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/meeting_heading"
+            android:text="loadng title"
+            style="@style/Text"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/meeting_date"
+                android:text="loading date"
+                style="@style/Text"
+                android:textSize="12sp"
+                android:alpha="0.8"/>
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                style="@style/IconTint"
+                android:src="@drawable/img"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/meeting_time"
+                android:text="loading time"
+                style="@style/Text"
+                android:textSize="12sp"
+                android:alpha="0.8"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:gravity="center_vertical">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/meetingWith_user_profile_image"
+                android:src="@drawable/img"
+                android:scaleType="fitCenter"
+                app:shapeAppearance="@style/circle"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/meetingWith_user_name"
+                android:text="loading username"
+                android:layout_marginStart="10dp"
+                style="@style/Text"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/meeting_join_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:srcCompat="@drawable/icon_meeting"
+        app:backgroundTint="@color/base_color"
+        app:tint="@color/white"
+        android:layout_margin="10dp"
+        app:fabSize="mini"
+        app:elevation="6dp"
+        app:pressedTranslationZ="3dp"
+        app:hoveredFocusedTranslationZ="10dp"/>
+
+</com.google.android.material.card.MaterialCardView>

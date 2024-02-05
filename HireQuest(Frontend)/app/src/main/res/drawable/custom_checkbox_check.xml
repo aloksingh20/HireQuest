@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <bitmap
+                android:src="@drawable/icon_check"
+                android:tint="@color/white" />
+        </clip>
+    </item>
+</layer-list>

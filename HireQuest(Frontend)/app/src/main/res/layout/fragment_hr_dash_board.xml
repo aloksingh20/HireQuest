@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".fragment.HrDashBoardFragment"
+    style="@style/PageBackground">
+
+
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/appbar_container"
+    android:layout_alignParentStart="true"
+    app:elevation="0dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBar"
+        android:minHeight="?attr/actionBarSize"
+        style="@style/AppBar"
+        >
+
+        <!-- Left side content: Logo and Title -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true">
+
+            <!--                <com.google.android.material.imageview.ShapeableImageView-->
+            <!--                    android:layout_width="30dp"-->
+            <!--                    android:layout_height="30dp"-->
+            <!--                    android:id="@+id/logo"-->
+            <!--                    android:src="@drawable/hq_logo"-->
+            <!--                    app:shapeAppearanceOverlay="@style/circle"-->
+            <!--                    android:scaleType="centerCrop"-->
+            <!--                    android:layout_alignParentStart="true"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                style="@style/Text"
+                android:text="HireQuest"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/notification_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_notification_inactive"
+                style="@style/IconTint"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+</com.google.android.material.appbar.AppBarLayout>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_layout"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:id="@+id/dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="15dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/message"
+                        android:id="@+id/messageCard"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="15dp"
+                            android:background="@color/messageCard">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Messages"
+                                android:id="@+id/messageTitle"
+                                style="@style/Text"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="02"
+                                android:id="@+id/messageCount"
+                                android:layout_alignParentBottom="true"
+                                android:textColor="@color/message"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/scheduledMeeting"
+                        android:id="@+id/scheduledMeetingCard"
+                        >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="15dp"
+                            android:background="@color/scheduledMeetingCard">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Scheduled \nMeeting"
+                                android:id="@+id/meetingScheduledTitle"
+                                style="@style/Text"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="01"
+                                android:id="@+id/meetingScheduledCount"
+                                android:layout_alignParentBottom="true"
+                                android:textColor="@color/scheduledMeeting"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/meetingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/dashboard">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/meetingLayoutHeading"
+                android:text="Your Meetings"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                style="@style/Text"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                style="@style/AppBar">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/upcomingMeetingTab"
+                        android:text="Upcoming"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:background="@drawable/home_meeting_fragment_background_active"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    style="@style/AppBar"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/pastMeetingTab"
+                        android:text="Past"
+                        style="@style/Text"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+<!--            <FrameLayout-->
+<!--                android:id="@+id/meeting_frameLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noMeeting"
+                android:text="No meeting scheduled, Please schedule first"
+                style="@style/Text"
+                android:alpha="0.7"
+                android:textStyle="italic"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"/>
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/meetingLoadingBar"
+                app:lottie_fileName="loading1.json"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/meetingRecyclerView"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/create_new_meeting_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/meetingLayout"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_background_day"
+            android:backgroundTint="@color/base_color"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/rounded_background_day"
+                android:src="@drawable/icon_add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:text="Schedule Meeting Now"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

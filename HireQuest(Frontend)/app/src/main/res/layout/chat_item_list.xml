@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:background="@color/page_background">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/user_profile_img"
+        android:src="@drawable/icon_setting_person"
+        app:shapeAppearanceOverlay="@style/circle"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/user_profile_img">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_name"
+            android:text="Alok Singh"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_recent_message"
+            android:text="Hey there, Great profile!"
+            android:textColor="@color/text"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recent_message_time"
+        android:text="09:40AM"
+        android:textStyle="bold"
+        android:textColor="@color/text"
+        android:textSize="14sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/unseen_message_count"
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/recent_message_time"
+        android:gravity="center"
+        android:background="@drawable/badge_background"/>
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
+

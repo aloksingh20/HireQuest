@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        style="@style/PageBackground">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/top_breaker_line"
+            android:backgroundTint="@color/text"
+            android:background="@color/text"
+            android:alpha="0.5"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="15dp"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/resume_recyclerview_list_item_pdf_icon"
+            android:src="@drawable/icon_pdf"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/top_breaker_line"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resume_recyclerview_list_item_file_name"
+            style="@style/Text"
+            android:text="file name"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            android:layout_below="@+id/top_breaker_line"
+            android:layout_toEndOf="@+id/resume_recyclerview_list_item_pdf_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resume_recyclerview_list_item_file_size"
+            android:text="0 kb"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/resume_recyclerview_list_item_pdf_icon"
+            android:layout_below="@id/resume_recyclerview_list_item_file_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resume_recyclerview_list_item_divider"
+            android:text="-"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/resume_recyclerview_list_item_file_size"
+            android:layout_below="@id/resume_recyclerview_list_item_file_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resume_recyclerview_list_item_timeStamp"
+            android:text="date"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/resume_recyclerview_list_item_divider"
+            android:layout_below="@id/resume_recyclerview_list_item_file_name"
+            />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/resume_recyclerview_list_item_delete_icon"
+            android:src="@drawable/icon_delete_pdf"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/top_breaker_line"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            style="@style/ProfileIconTint"
+            android:id="@+id/resume_recyclerview_list_item_download_icon"
+            android:src="@drawable/icon_download"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/top_breaker_line"
+            android:visibility="gone"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:id="@+id/resume_recyclerview_list_item_download_loading_bar"
+            app:lottie_fileName="loading1.json"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/top_breaker_line"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

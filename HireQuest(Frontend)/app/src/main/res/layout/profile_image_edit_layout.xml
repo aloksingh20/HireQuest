@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingBottom="30dp">
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="6dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_background_day"
+        android:backgroundTint="@color/base_color"
+        android:id="@+id/top_view"
+        android:layout_marginTop="3dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit profile image"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        style="@style/Text"
+        android:layout_marginTop="30dp"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        app:shapeAppearance="@style/circle"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/profile_picture_edit"
+        app:shapeAppearanceOverlay="@style/circle"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        app:strokeWidth="0.1dp"
+        app:strokeColor="@color/base_color"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/change_image"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Choose"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:textSize="16sp"
+            style="@style/CustomOutlinedButton"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upload_image"
+            android:layout_marginBottom="20dp"
+            android:text="Upload"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:textSize="16sp"
+            style="@style/Widget.Material3.Button"
+            android:backgroundTint="@color/base_color"
+            android:textColor="@color/page_background"
+            app:strokeColor="@color/base_color"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

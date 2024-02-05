@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:id="@+id/login_activity"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    style="@style/PageBackground"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sign_in_heading"
+        android:text="Welcome Back"
+        style="@style/Text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Text"
+        android:id="@+id/or_sign_in"
+        android:text="to"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/sign_in_heading"
+        android:layout_marginTop="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp" />
+
+    <TextView
+        android:id="@+id/hireQuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sign_in_heading"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/or_sign_in"
+        android:text="HireQuest"
+        android:textColor="@color/base_color"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/loginSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Text"
+        android:alpha="0.8"
+        android:layout_below="@+id/hireQuest"
+        android:text="Hello there, login to continue"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_username_textInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_below="@+id/loginSubtitle"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="40dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_usernameEdt"
+            android:inputType="text"
+            style="@style/Text"
+            android:cursorVisible="true"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_textInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_username_textInput"
+        android:hint="Password"
+        app:passwordToggleEnabled="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="15dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:passwordToggleTint="@color/heading"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_passwordEdt"
+            android:inputType="textPassword"
+            style="@style/Text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/login_forgotPasswordTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot password?"
+        style="@style/Text"
+        android:layout_gravity="right"
+        android:textSize="12sp"
+        android:layout_below="@+id/password_textInput"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="5dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signInBtn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_forgotPasswordTv"
+        android:layout_marginTop="30dp">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_fileName="loading.json"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:visibility="gone"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:elevation="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:shadowColor="@color/base_color"
+            android:outlineAmbientShadowColor="@color/base_color"
+            android:outlineSpotShadowColor="@color/base_color"
+            app:rippleColor="@color/hint_color"
+            app:strokeColor="@color/hint_color"
+            android:backgroundTint="@color/base_color"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text"
+        android:layout_below="@+id/signInBtn_container"
+        android:id="@+id/view"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:alpha="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or continue with social account"
+        android:textSize="11sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/view"
+        android:layout_marginTop="-8dp"
+        style="@style/Text"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continueWithGoogleBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="Login with Google"
+        android:textAllCaps="false"
+        android:textColor="@color/heading"
+        android:visibility="visible"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/google"
+        app:iconGravity="textStart"
+        app:iconSize="20dp"
+        app:iconTint="@null"
+        app:strokeColor="@color/heading"
+        app:strokeWidth="0.5dp"
+        android:layout_below="@+id/view"
+        android:shadowColor="@color/base_color"
+        app:elevation="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? "
+            style="@style/Text"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/joinTextView"
+            android:text="Join Now"
+            android:textColor="@color/base_color"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>

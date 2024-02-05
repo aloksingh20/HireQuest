@@ -1,0 +1,10 @@
+<!-- res/menu/dropdown_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option1"
+        android:title="Create your recuritie profile" />
+    <item
+        android:id="@+id/option2"
+        android:title="Create your recuriter profile" />
+
+</menu>
